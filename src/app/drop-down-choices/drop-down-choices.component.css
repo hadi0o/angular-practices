@@ -1,0 +1,26 @@
+.top-center {
+  text-align: center;
+  margin-top: 200px;
+  font-size: 34px;
+}
+
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #d9f5fb;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px 0px #888;
+}
