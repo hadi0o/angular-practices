@@ -1,16 +1,47 @@
-<h1 class="top-center" [style.font-family]="fontChange">{{ dateNow }}</h1>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
 <div class="container">
-  <div class="dropdown">
-    <button class="btn btn-info btn-lg dropdown-toggle"
-            type="button"
-            id="dropdownMenuButton"
-            (click)="showDropDown()"
-            aria-haspopup="true">
-      نمایش تاریخ
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" [class.show]="dropDown">
-      <button class="dropdown-item" (click)="onDateSelect(option1)">{{ option1 }}</button>
-      <button class="dropdown-item" (click)="onDateSelect(option2)">{{ option2 }}</button>
-    </div>
-  </div>
+	<div class="row">
+		<div class="col">
+		<div class="col">
+			<div class="weather-card rain">
+				<div class="top">
+					<div class="wrapper">
+						<div class="mynav">
+							<a href="javascript:;"><span class="lnr lnr-chevron-left"></span></a>
+							<a href="javascript:;"><span class="lnr lnr-cog"></span></a>
+						</div>
+						<h1 class="heading">تاریخ امروز</h1>
+            <hr>
+						<p class="temp">
+							<span class="temp-value">{{ dateNow }}</span>
+						</p>
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="wrapper">
+						<ul class="forecast">
+              <div class="dropdown">
+              <button class="btn btn-info btn-lg dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton"
+                        (click)="showDropDown()"
+                        aria-haspopup="true">
+                        نمایش تاریخ
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" [class.show]="dropDown">
+                  @for (option of options; track option; let i = $index;) {
+                    <button class="dropdown-item" (click)="onDateSelect(options[i])">{{ option }}</button>
+                  }
+              </div>
+                </div>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 </div>

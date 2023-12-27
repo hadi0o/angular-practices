@@ -13,8 +13,7 @@ import momentJalali from 'jalali-moment';
 export class DropDownChoicesComponent {
 
   dropDown :boolean = false;
-  option1 : string = "Gregorian Date";
-  option2 : string = "تاریخ جلالی";
+  options : string[] = ["Gregorian Date", "تاریخ جلالی"];
   dateNow : string = '';
   jalaliDate : any = momentJalali();
 
@@ -24,8 +23,8 @@ export class DropDownChoicesComponent {
     this.dropDown = !this.dropDown;
   }
 
-  onDateSelect(option:string) {
-    if (option === this.option1) {
+  onDateSelect(selectedOption:string) {
+    if (selectedOption === this.options[0]) {
       this.dateNow = moment().format('MMMM D, YYYY');
       this.fontChange = 'Arial, sans-serif';
     }
