@@ -1,0 +1,54 @@
+.container-fluid {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.table thead th {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #495057;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+  background-color: #4950571a;
+}
+
+/* Center the pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Style pagination buttons */
+.pagination button {
+  padding: 10px 30px;
+  margin: 0 5px;
+  background-color: #6a3bb7;
+  color: #fff;
+  border: 1px solid #cf04ed;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.pagination button[disabled] {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Center the pagination span */
+.pagination span {
+  display: inline-block;
+  margin: 0 10px;
+}
